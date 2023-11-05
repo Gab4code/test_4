@@ -24,12 +24,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Firebase',
-      home: SplashSreen(child: LoginPage(),
-      routes : <String, WidgetBuilder> {
-        '/home': (BuildContext context) => HomePage(),
-      }     
-      
-      )
+      home: SplashSreen(child: LoginPage(),),
+      routes: {
+        '/home': (context) => HomePage(),
+      },
+
     );
   }
 }
