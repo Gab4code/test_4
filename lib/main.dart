@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:test_4/features/app/splash_screen/splash_screen.dart';
+import 'package:test_4/features/user_auth/presentation/pages/home_page.dart';
 import 'package:test_4/features/user_auth/presentation/pages/login_page.dart';
 import 'package:test_4/firebase_options.dart';
 
@@ -23,7 +24,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Firebase',
-      home: SplashSreen(child: LoginPage(),)
+      home: SplashSreen(child: LoginPage(),
+      routes : <String, WidgetBuilder> {
+        '/home': (BuildContext context) => HomePage(),
+      }     
+      
+      )
     );
   }
 }
