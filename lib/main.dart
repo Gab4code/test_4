@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:test_4/features/app/splash_screen/splash_screen.dart';
 import 'package:test_4/features/user_auth/presentation/pages/home_page.dart';
 import 'package:test_4/features/user_auth/presentation/pages/login_page.dart';
+import 'package:test_4/features/user_auth/presentation/pages/profile_page.dart';
+import 'package:test_4/features/user_auth/presentation/pages/tutorial_page.dart';
 import 'package:test_4/firebase_options.dart';
 
 
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
       home: SplashSreen(child: LoginPage(),),
       routes: {
         '/home': (context) => HomePage(),
+        '/profile': (context) => profilePage(),
+        '/tutorial': (context) => tutorialPage(),
+        '/login': (context) => LoginPage(),
       },
 
     );
